@@ -37,6 +37,8 @@
 			this.button_multiplyKoef = new System.Windows.Forms.Button();
 			this.button_Koh = new System.Windows.Forms.Button();
 			this.button_addVRGB = new System.Windows.Forms.Button();
+			this.button_Save = new System.Windows.Forms.Button();
+			this.button_Load = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_NeuroWorking)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_NeuroShedule)).BeginInit();
 			this.SuspendLayout();
@@ -127,11 +129,33 @@
 			this.button_addVRGB.UseVisualStyleBackColor = true;
 			this.button_addVRGB.Click += new System.EventHandler(this.button_addVRGB_Click);
 			// 
+			// button_Save
+			// 
+			this.button_Save.Location = new System.Drawing.Point(828, 524);
+			this.button_Save.Name = "button_Save";
+			this.button_Save.Size = new System.Drawing.Size(118, 77);
+			this.button_Save.TabIndex = 9;
+			this.button_Save.Text = "Сохранить";
+			this.button_Save.UseVisualStyleBackColor = true;
+			this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+			// 
+			// button_Load
+			// 
+			this.button_Load.Location = new System.Drawing.Point(828, 607);
+			this.button_Load.Name = "button_Load";
+			this.button_Load.Size = new System.Drawing.Size(118, 77);
+			this.button_Load.TabIndex = 10;
+			this.button_Load.Text = "Загрузить";
+			this.button_Load.UseVisualStyleBackColor = true;
+			this.button_Load.Click += new System.EventHandler(this.button_Load_Click);
+			// 
 			// DrawingForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1276, 745);
+			this.Controls.Add(this.button_Load);
+			this.Controls.Add(this.button_Save);
 			this.Controls.Add(this.button_addVRGB);
 			this.Controls.Add(this.button_Koh);
 			this.Controls.Add(this.button_multiplyKoef);
@@ -161,6 +185,8 @@
 		private System.Windows.Forms.Button button_multiplyKoef;
 		private System.Windows.Forms.Button button_Koh;
 		private System.Windows.Forms.Button button_addVRGB;
+		private System.Windows.Forms.Button button_Save;
+		private System.Windows.Forms.Button button_Load;
 	}
 }
 

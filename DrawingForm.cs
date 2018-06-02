@@ -20,7 +20,7 @@ namespace TryDrawNet
 		public static KochonenNet knet;
 
 
-		double koef = 2.9, param = 0.01;
+		double koef = 2.6, param = 0.01;
 		Bitmap bitmap;
 		Graphics gr;
 		Pen neoPen = new Pen(Color.DarkBlue, 3);
@@ -44,7 +44,7 @@ namespace TryDrawNet
 			knet = new KochonenNet(3, 4);
 			//pictureBox_NeuroShedule.Image = DrawNeuronet(pictureBox_NeuroShedule.Width, pictureBox_NeuroShedule.Height);
 
-			pictureBox_NeuroShedule.Image = PointNeuron.Draw(knet, pictureBox_NeuroShedule.Width, pictureBox_NeuroShedule.Height, out listPointNeuron);
+			pictureBox_NeuroShedule.Image = PointNeuron.Draw(net, pictureBox_NeuroShedule.Width, pictureBox_NeuroShedule.Height, out listPointNeuron);
 
 
 			net.ClearImps();
@@ -66,6 +66,7 @@ namespace TryDrawNet
 
 				net.ClearImps();
 
+				
 				
 				net.InputLayer.neurons[0].imp = (randNum.NextDouble() + 0.1) / 1.3d + 0.1;
 				x = net.InputLayer.neurons[0].imp;
@@ -183,6 +184,19 @@ namespace TryDrawNet
 				gr.DrawRectangle(new Pen(vectors[i].ToColor(), 10), 5, i * 20, 10, 10);
 			
 			pictureBox_NeuroWorking.Image = bitmap;
+		}
+
+		string localpath = "";
+		private void button_Save_Click(object sender, EventArgs e)
+		{
+			localpath = net.SaveXml();
+		}
+
+		private void button_Load_Click(object sender, EventArgs e)
+		{
+			net.LoadXml(localpath);
+			pictureBox_NeuroShedule.Image = PointNeuron.Draw(net, pictureBox_NeuroShedule.Width, pictureBox_NeuroShedule.Height, out listPointNeuron);
+
 		}
 
 		private void button_multiplyKoef_Click(object sender, EventArgs e)
