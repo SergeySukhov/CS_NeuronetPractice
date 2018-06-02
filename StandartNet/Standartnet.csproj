@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Neuronet\Neuronet.csproj">
+    <ProjectReference Include="..\Neuronet\Neuronet.csproj">
       <Project>{3df3d0eb-f86a-46f8-a1b2-726d568e0e77}</Project>
       <Name>Neuronet</Name>
     </ProjectReference>

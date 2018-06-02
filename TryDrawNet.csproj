@@ -80,13 +80,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Neuronet\Neuronet.csproj">
-      <Project>{3df3d0eb-f86a-46f8-a1b2-726d568e0e77}</Project>
-      <Name>Neuronet</Name>
-    </ProjectReference>
     <ProjectReference Include="KochonenNet\Kochonennet.csproj">
       <Project>{bca9ba79-62a1-4956-ab3d-81c93c771cdb}</Project>
       <Name>Kochonennet</Name>
+    </ProjectReference>
+    <ProjectReference Include="Neuronet\Neuronet.csproj">
+      <Project>{3df3d0eb-f86a-46f8-a1b2-726d568e0e77}</Project>
+      <Name>Neuronet</Name>
     </ProjectReference>
     <ProjectReference Include="StandartNet\Standartnet.csproj">
       <Project>{ab11bd40-5ea8-42c2-b58b-701785a99e2f}</Project>
